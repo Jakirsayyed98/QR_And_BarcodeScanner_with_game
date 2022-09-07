@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        app:iconTint="@color/black"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ico_share"
+                android:title="Share"
+                />
+
+            <item
+                android:id="@+id/Rating"
+                android:icon="@drawable/ic_baseline_star_rate_24"
+                android:title="Rating"
+                />
+            <item
+                android:id="@+id/PrivacyPolicy"
+                android:icon="@drawable/ic_local_police_24"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/AboutUs"
+                android:icon="@drawable/about_us"
+                android:title="About Us"
+                />
+            <item
+                android:id="@+id/more"
+                android:icon="@drawable/ic_baseline_more_black"
+                android:iconTint="@color/black"
+                android:title="More Apps"
+                />
+        </menu>
+    </item>
+
+
+</menu>

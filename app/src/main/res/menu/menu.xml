@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single" android:id="@+id/group1">
+        <item
+            android:id="@+id/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/Latest_news"
+            android:title="Latest news" />
+
+        <item
+            android:id="@+id/ternding_news"
+            android:title="Trending news" />
+
+        <item
+            android:id="@+id/popular_news"
+            android:title="Popular News" />
+
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/group2">
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ico_share"
+            android:title="Share"
+            />
+
+        <item
+            android:id="@+id/Rating"
+            android:icon="@drawable/ic_baseline_star_rate_24"
+            android:title="Rating"
+            />
+        <item
+            android:id="@+id/PrivacyPolicy"
+            android:icon="@drawable/ic_local_police_24"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/AboutUs"
+            android:icon="@drawable/about_us"
+            android:title="About Us"
+            />
+        <item
+            android:id="@+id/more"
+            android:icon="@drawable/ic_baseline_more_black"
+            android:iconTint="@color/black"
+            android:title="More Apps"
+            />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/group3">
+
+
+        <item
+            android:id="@+id/About"
+            android:title="About" />
+        <item
+            android:id="@+id/version"
+            android:title="version" />
+
+    </group>
+
+</menu>
