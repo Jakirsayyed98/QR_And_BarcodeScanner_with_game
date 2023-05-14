@@ -16,17 +16,17 @@ import com.jhcreativedeveloper.BarcodeScanner.R
 
 class NotficationReciver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        var notificationManager : NotificationManager   = context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-        var next = Intent(Intent(context,MainActivity::class.java))
+        val notificationManager : NotificationManager   = context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val next = Intent(Intent(context,MainActivity::class.java))
         next.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
-        var pendingIntent : PendingIntent = PendingIntent.getActivity(context,111,next,PendingIntent.FLAG_UPDATE_CURRENT)
+        val pendingIntent : PendingIntent = PendingIntent.getActivity(context,111,next,PendingIntent.FLAG_UPDATE_CURRENT)
 
 
 
 
 
-        var notificationbuilder : NotificationCompat.Builder = NotificationCompat.Builder(context)
+        val notificationbuilder : NotificationCompat.Builder = NotificationCompat.Builder(context)
             .setContentIntent(pendingIntent)
             .setSmallIcon(R.drawable.qr_icon)
             .setContentTitle("Play More And More Games")

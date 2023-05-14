@@ -12,7 +12,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.jhcreativedeveloper.BarcodeScanner.Games.GamesWebViewActivity
 import com.jhcreativedeveloper.BarcodeScanner.R
-import com.jhcreativedeveloper.BarcodeScanner.classes.MyDataBase
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.MyDataBase
 import java.util.*
 
 class MyAdapter(var context: Context, var list: List<MyDataBase>) :
@@ -23,8 +23,8 @@ class MyAdapter(var context: Context, var list: List<MyDataBase>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.id.text = list[position].id.toString()
-        holder.data.text = list[position].getData().toString()
+        holder.id.text = list[position].iD.toString()
+        holder.data.text = list[position].data.toString()
 
         val rnd = Random()
         val color: Int = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
@@ -33,10 +33,10 @@ class MyAdapter(var context: Context, var list: List<MyDataBase>) :
         holder.cardView.setOnClickListener {
             Toast.makeText(
                 holder.id.context,
-                "Data " + list[position].getData(),
+                "Data " + list[position].data,
                 Toast.LENGTH_SHORT
             ).show()
-            var data=list[position].getData()
+            var data=list[position].data
             if (data.isNullOrEmpty()) {
             } else if (data.toString().contains("http")) {
                 GamesWebViewActivity.openWebView(holder.itemView.context,data.toString())

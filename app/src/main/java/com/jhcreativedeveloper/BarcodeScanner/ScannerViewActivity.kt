@@ -11,10 +11,10 @@ import com.karumi.dexter.listener.single.PermissionListener
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.PermissionToken
-import com.jhcreativedeveloper.BarcodeScanner.classes.AppDatabase
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.AppDatabase
 import androidx.room.Room
 import com.google.zxing.Result
-import com.jhcreativedeveloper.BarcodeScanner.classes.MyDataBase
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.MyDataBase
 import com.karumi.dexter.listener.PermissionRequest
 
 class ScannerViewActivity : AppCompatActivity(), ZXingScannerView.ResultHandler {
@@ -82,7 +82,7 @@ class ScannerViewActivity : AppCompatActivity(), ZXingScannerView.ResultHandler 
             if (data.isNullOrEmpty()){
 
             }else
-            userDao.insertRecord(MyDataBase(0, data))
+            userDao!!.insertRecord(MyDataBase(0, data))
         }
     }
 }

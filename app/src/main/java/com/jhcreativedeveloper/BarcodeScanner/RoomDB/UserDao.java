@@ -1,10 +1,10 @@
-package com.jhcreativedeveloper.BarcodeScanner;
+package com.jhcreativedeveloper.BarcodeScanner.RoomDB;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.jhcreativedeveloper.BarcodeScanner.classes.MyDataBase;
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.MyDataBase;
 
 import java.util.List;
 

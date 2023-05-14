@@ -47,7 +47,7 @@ class GamesWebViewActivity: BaseActivity<ActivityGamesWebViewBinding>() {
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.settings.domStorageEnabled = true
         binding.webView.settings.databaseEnabled = true
-        binding.webView.settings.setAppCacheEnabled(true)
+//        binding.webView.settings.setAppCacheEnabled(true)
         binding.webView.settings.javaScriptCanOpenWindowsAutomatically = true
         binding.webView.settings.allowFileAccess = true
         binding.webView.setLayerType(View.LAYER_TYPE_HARDWARE, null)

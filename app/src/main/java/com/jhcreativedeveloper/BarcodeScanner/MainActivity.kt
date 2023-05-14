@@ -1,9 +1,5 @@
 package com.jhcreativedeveloper.BarcodeScanner
 
-import android.app.AlarmManager
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
 import android.widget.TextView
@@ -12,13 +8,12 @@ import android.content.Intent
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.net.Uri
-import android.os.Build
 import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import com.jhcreativedeveloper.BarcodeScanner.classes.AppDatabase
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.AppDatabase
 import androidx.room.Room
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jhcreativedeveloper.BarcodeScanner.AdapterData.MyAdapter
@@ -33,10 +28,8 @@ import com.jhcreativedeveloper.BarcodeScanner.Games.ModelClasses.AllGames
 import com.jhcreativedeveloper.BarcodeScanner.Games.ModelClasses.Game
 import com.jhcreativedeveloper.BarcodeScanner.Games.ModelClasses.SliderModelMain
 import com.jhcreativedeveloper.BarcodeScanner.Games.OneActivityForAll
-import com.jhcreativedeveloper.BarcodeScanner.Notification.NotficationReciver
 import com.jhcreativedeveloper.BarcodeScanner.databinding.ActivityMainBinding
 import hotchemi.android.rate.AppRate
-import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : BaseActivity<ActivityMainBinding>()  {
@@ -338,7 +331,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>()  {
             ).allowMainThreadQueries().build()
             val userDao = db.userDao()
             //scan_RV!!.layoutManager = LinearLayoutManager(this)
-            val dataBases = userDao.allData
+            val dataBases = userDao!!.allData
             val adapter = MyAdapter(this, dataBases)
         //    scan_RV!!.adapter = adapter
             adapter.notifyDataSetChanged()

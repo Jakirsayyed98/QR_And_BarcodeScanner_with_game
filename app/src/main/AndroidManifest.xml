@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jhcreativedeveloper.BarcodeScanner">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SET_ALARM"/>
-    
+    <uses-permission android:name="android.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -15,29 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyBarcodeScanner">
         <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.Games.AbooutUsPage"
+            android:name=".Login.ContainerActivity"
             android:exported="false" />
         <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.Games.Privacy_Policy"
-            android:exported="false" />
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.HistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.MainActivity2"
-            android:exported="true" />
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.ScannerViewActivity"
-            android:exported="true" />
-
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.Games.GamesWebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.Games.OneActivityForAll"
-            android:exported="false" />
-        <activity
-            android:name="com.jhcreativedeveloper.BarcodeScanner.MainActivity"
+            android:name=".Login.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,8 +29,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Games.AbooutUsPage"
+            android:exported="false" />
+        <activity
+            android:name=".Games.Privacy_Policy"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
+            android:name=".ScannerViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Games.GamesWebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Games.OneActivityForAll"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
 
-        <receiver android:name=".Notification.NotficationReciver"/>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <receiver android:name=".Notification.NotficationReciver" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

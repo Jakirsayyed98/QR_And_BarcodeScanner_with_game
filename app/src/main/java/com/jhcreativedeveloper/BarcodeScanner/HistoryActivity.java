@@ -12,8 +12,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jhcreativedeveloper.BarcodeScanner.AdapterData.MyAdapter;
-import com.jhcreativedeveloper.BarcodeScanner.classes.AppDatabase;
-import com.jhcreativedeveloper.BarcodeScanner.classes.MyDataBase;
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.AppDatabase;
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.MyDataBase;
+import com.jhcreativedeveloper.BarcodeScanner.RoomDB.UserDao;
 
 import java.util.List;
 
